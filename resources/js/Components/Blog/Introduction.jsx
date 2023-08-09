@@ -2,12 +2,20 @@ import {useEffect, useState} from "react";
 
 export default function Introduction({}) {
 
-    const [intro, setIntro] = useState("")
+    const [intro, setIntro] = useState(
+        JSON.parse(localStorage.getItem('intro')) || {}
+    )
 
     useEffect(() => {
         fetch('/introduction')
             .then(response => response.json())
-            .then(data => setIntro(data))
+            .then(data => {
+                localStorage.setItem('intro', JSON.stringify(data))
+
+                if (intro.name === undefined) {
+                    setIntro(data)
+                }
+            })
     }, []);
 
     return (
