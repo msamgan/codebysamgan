@@ -2,13 +2,22 @@ import {useEffect, useState} from "react";
 import {Link} from "@inertiajs/react";
 
 export default function Header() {
-    const [pages, setPages] = useState([]);
+    const [pages, setPages] = useState(
+        JSON.parse(localStorage.getItem('pages')) || []
+    );
 
     useEffect(() => {
         fetch(route('page.list'))
             .then(response => response.json())
-            .then(data => setPages(data));
+            .then(data => {
+                localStorage.setItem('pages', JSON.stringify(data));
+
+                if (pages.length === 0) {
+                    setPages(data);
+                }
+            });
     }, []);
+
 
     return (
         <div className={'border-b'}>
