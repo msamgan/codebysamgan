@@ -65,4 +65,11 @@ class PostController extends Controller
             'q' => $request->query('q'),
         ]);
     }
+
+    public function feed(): \Illuminate\Http\Response
+    {
+        $posts = Post::userPosts();
+
+        return response()->view('feed', compact('posts'))->header('Content-Type', 'text/xml');
+    }
 }
