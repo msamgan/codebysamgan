@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class, 'index'])->name('welcome');
 Route::get('/introduction', [PostController::class, 'introduction'])->name('introduction');
+Route::get('/feed', [PostController::class, 'feed'])->name('feed');
+
 Route::get('/{post}', [PostController::class, 'post'])->name('post');
 Route::get('/tag/{tag}', [PostController::class, 'tag'])->name('tag');
 
@@ -24,6 +26,9 @@ Route::get('/page/list', [PageController::class, 'pageList'])->name('page.list')
 Route::get('/page/tags', [PageController::class, 'pageTags'])->name('page.tags');
 
 Route::get('/page/{page}', [PageController::class, 'page'])->name('page');
+
+
+
 
 /*Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
