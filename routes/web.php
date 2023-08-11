@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PostController::class, 'index'])->name('welcome');
 Route::get('/introduction', [PostController::class, 'introduction'])->name('introduction');
 Route::get('/feed', [PostController::class, 'feed'])->name('feed');
-Route::get('/tag', [PageController::class, 'pageTags'])->name('page.tags.list');
+Route::get('/tags', [PageController::class, 'pageTags'])->name('page.tags.list');
 
 Route::get('/{post}', [PostController::class, 'post'])->name('post');
 Route::get('/tag/{tag}', [PostController::class, 'tag'])->name('tag');
