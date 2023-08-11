@@ -20,17 +20,7 @@
     @viteReactRefresh
     @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
     @inertiaHead
-
-    {{--@production--}}
-    {{--<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-    </script>--}}
-    {{--@endproduction--}}
+    
 </head>
 <body class="font-sans antialiased">
 @inertia
