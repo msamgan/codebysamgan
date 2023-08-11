@@ -1,17 +1,9 @@
 import {Head} from '@inertiajs/react';
 import Header from "@/Components/Blog/Header.jsx";
 import Footer from "@/Components/Blog/Footer.jsx";
-import ReactGA from 'react-ga';
-import {useEffect} from "react";
 
 
 export default function Guest({children, head}) {
-
-    useEffect(() => {
-        ReactGA.initialize('G-7MWTMQ6YDB');
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
-
     return (<>
         <Head>
             <title>{head.title}</title>
