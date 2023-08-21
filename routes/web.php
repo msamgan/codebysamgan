@@ -25,6 +25,7 @@ Route::get('/tag/{tag}', [PostController::class, 'tag'])->name('tag');
 
 Route::get('/page/list', [PageController::class, 'pageList'])->name('page.list');
 Route::get('/page/tags', [PageController::class, 'pageTags'])->name('page.tags');
+Route::get('/top/tags', [PageController::class, 'topTags'])->name('top.tags');
 
 Route::get('/page/{page}', [PageController::class, 'page'])->name('page');
 

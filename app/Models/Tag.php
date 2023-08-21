@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Wink\WinkTag;
 
@@ -15,6 +14,11 @@ class Tag extends WinkTag
     public static function allTags(): Collection|array
     {
         return self::query()->withCount('posts')->get();
+    }
+
+    public static function topTags(): Collection|array
+    {
+        return self::query()->withCount('posts')->orderBy('posts_count', 'desc')->limit(10)->get();
     }
 
     public function getRouteKeyName(): string

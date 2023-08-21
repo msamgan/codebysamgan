@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Page;
 use App\Models\Tag;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -28,5 +27,10 @@ class PageController extends Controller
         return Inertia::render('PageTags', [
             'tags' => Tag::allTags(),
         ]);
+    }
+
+    public function topTags(): Collection|array
+    {
+        return Tag::topTags();
     }
 }
