@@ -26,6 +26,10 @@ export default function Header() {
             .then(response => response.json())
             .then(data => {
                     localStorage.setItem('topTags', JSON.stringify(data));
+
+                    if (topTags.length === 0) {
+                        setTopTags(data);
+                    }
                 }
             );
 
