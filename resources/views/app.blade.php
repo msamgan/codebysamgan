@@ -20,9 +20,16 @@
     @viteReactRefresh
     @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
     @inertiaHead
-    
+
+
+    <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=64e3a1db4265f4001221c93f&product=sticky-share-buttons&source=platform"
+            async="async"></script>
+
 </head>
 <body class="font-sans antialiased">
 @inertia
+
+<div class="sharethis-sticky-share-buttons"></div>
 </body>
 </html>

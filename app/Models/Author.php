@@ -17,6 +17,7 @@ class Author extends WinkAuthor
      */
     public static function userIntroduction(): Model|Builder|null
     {
-        return self::query()->where('id', AUTHOR_ID)->first();
+        return self::query()->where('id', AUTHOR_ID)
+            ->first();
     }
 }

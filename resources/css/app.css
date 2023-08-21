@@ -122,3 +122,7 @@ table tr:nth-child(2n) {
     background-color: #f6f8fa;
 }
 
+.sharethis-sticky-share-buttons .st-btn {
+    display: flex !important;
+}
+
