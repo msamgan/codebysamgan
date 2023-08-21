@@ -20,14 +20,14 @@ export default function Header() {
 
 
     return (
-        <div className={'border-b'}>
+        <div className={'border-b bg-orange-600'}>
             <header
                 className="container flex items-center justify-between w-full max-w-3xl px-6 py-10 mx-auto xl:max-w-5xl">
-                <Link rel="noopener noreferrer" href="/" className="block h-6 text-2xl font-semibold">
-                    CodeBySamgan
+                <Link rel="noopener noreferrer" href="/" className="block h-6 text-2xl font-semibold text-white">
+                    {import.meta.env.VITE_APP_NAME}
                 </Link>
                 <div className="flex items-center">
-                    <div className="hidden space-x-2 font-medium sm:block">
+                    <div className="hidden space-x-2 font-medium sm:block text-white">
                         <a rel="noopener noreferrer" href={route('page.tags')} className="p-1">Tags</a>
                         {
                             pages.map((page, index) => (

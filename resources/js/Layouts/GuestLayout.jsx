@@ -21,10 +21,10 @@ export default function Guest({children, head}) {
         <div className="antialiased bg-gray-100 text-gray-800">
             <div className="flex flex-col min-h-screen space-y-12">
                 <Header/>
-                <main className="container flex-1 max-w-3xl px-6 mx-auto space-y-12 xl:max-w-5xl">
+                <main className="container flex-1 max-w-3xl px-6 mx-auto space-y-12 xl:max-w-5xl pb-20">
                     {children}
                 </main>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         </div>
     </>);
