@@ -20,6 +20,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@giscus/react": "^2.3.0"
+        "@giscus/react": "^2.3.0",
+        "react-ga": "^3.3.1"
     }
 }
