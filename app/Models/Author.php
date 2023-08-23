@@ -11,10 +11,6 @@ class Author extends WinkAuthor
 {
     use HasFactory;
 
-
-    /**
-     * @return Builder|Model|null
-     */
     public static function userIntroduction(): Model|Builder|null
     {
         return self::query()->where('id', AUTHOR_ID)
