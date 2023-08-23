@@ -26,6 +26,16 @@
             src="https://platform-api.sharethis.com/js/sharethis.js#property=64e3a1db4265f4001221c93f&product=sticky-share-buttons&source=platform"
             async="async"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MWTMQ6YDB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7MWTMQ6YDB');
+    </script>
+
 </head>
 <body class="font-sans antialiased">
 @inertia
