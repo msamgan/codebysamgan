@@ -7,7 +7,7 @@ export default function Tag({tag, posts, q}) {
     const [search, setSearch] = useState(q)
 
     useEffect(() => {
-        console.log(posts)
+        //console.log(posts)
     }, []);
 
     return (<GuestLayout
