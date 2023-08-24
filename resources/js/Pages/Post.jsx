@@ -33,7 +33,12 @@ export default function Post({post, relatedPosts}) {
             <div className="max-w-5xl px-6 mx-auto space-y-12 post">
                 <article className="space-y-8 bg-gray-100 text-gray-900">
                     <div className="space-y-6">
-                        <h1 className="text-4xl font-bold md:tracki md:text-5xl">{post.title}</h1>
+                        <h1 className="text-5xl font-bold md:tracki md:text-5xl">{post.title}</h1>
+                        {
+                            post.featured_image
+                                ? <img className={'rounded-lg'} src={post.featured_image} alt={post.title}/>
+                                : null
+                        }
                         <div
                             className="flex flex-col items-start justify-between w-full md:flex-row md:items-center text-gray-600">
                             <div className="flex items-center md:space-x-2">

@@ -9,7 +9,7 @@ export default function PostListing({posts}) {
                 {
                     posts.map((post) => {
                         return (
-                            <li key={post.id} className={post.featured_image ? 'flex flex-row gap-6' : 'w-full'}>
+                            <li key={post.id} className={post.featured_image ? 'flex flex-row' : 'w-full'}>
                                 <article className={'border-b pb-6'}>
                                     <dl>
                                         <dt className="sr-only">Published on</dt>
@@ -33,11 +33,10 @@ export default function PostListing({posts}) {
                                 </article>
                                 {
                                     post.featured_image
-                                        ? <img className={'w-1/5 rounded-full'} src={post.featured_image}
+                                        ? <img className={'w-1/5 rounded-lg ml-3'} src={post.featured_image}
                                                alt={post.title}/>
                                         : ''
                                 }
-
                             </li>
                         )
                     })
