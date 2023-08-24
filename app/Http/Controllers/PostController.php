@@ -73,7 +73,7 @@ class PostController extends Controller
         return response()->view('feed', compact('posts'))->header('Content-Type', 'text/xml');
     }
 
-    public function sitemap()
+    public function sitemap(): \Illuminate\Http\Response
     {
         $posts = Post::userPosts();
 
