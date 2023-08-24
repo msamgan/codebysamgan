@@ -16,9 +16,9 @@ class PostController extends Controller
     public function index(): Response
     {
         return Inertia::render('Welcome')->with([
-            'posts' => Post::userPosts(request()->query('q')),
-            'q' => request()->query('q'),
-        ]
+                'posts' => Post::userPosts(request()->query('q')),
+                'q' => request()->query('q'),
+            ]
         );
     }
 
@@ -71,5 +71,12 @@ class PostController extends Controller
         $posts = Post::userPosts();
 
         return response()->view('feed', compact('posts'))->header('Content-Type', 'text/xml');
+    }
+
+    public function sitemap(): \Illuminate\Http\Response
+    {
+        $posts = Post::userPosts();
+
+        return response()->view('sitemap', compact('posts'))->header('Content-Type', 'text/xml');
     }
 }
