@@ -9,12 +9,15 @@ export default function PostListing({posts}) {
                 {
                     posts.map((post) => {
                         return (
-                            <li key={post.id}>
+                            <li key={post.id} className={post.featured_image ? 'flex flex-row gap-6' : 'w-full'}>
                                 <article className={'border-b pb-6'}>
                                     <dl>
                                         <dt className="sr-only">Published on</dt>
                                         <dd className="text-xs text-gray-600">
-                                            <time dateTime="2021-01-12">{formatDate(post.publish_date)}</time>
+                                            <time
+                                                dateTime={formatDate(post.publish_date)}>
+                                                {formatDate(post.publish_date)}
+                                            </time>
                                         </dd>
                                     </dl>
                                     <div className="space-y-1">
@@ -28,6 +31,13 @@ export default function PostListing({posts}) {
                                         </div>
                                     </div>
                                 </article>
+                                {
+                                    post.featured_image
+                                        ? <img className={'w-1/5 rounded-full'} src={post.featured_image}
+                                               alt={post.title}/>
+                                        : ''
+                                }
+
                             </li>
                         )
                     })
