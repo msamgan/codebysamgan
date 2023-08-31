@@ -126,3 +126,6 @@ table tr:nth-child(2n) {
     display: flex !important;
 }
 
+.embedded_image img {
+    border-radius: 8px;
+}
