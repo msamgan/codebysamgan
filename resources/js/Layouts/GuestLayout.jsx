@@ -1,4 +1,4 @@
-import {Head} from '@inertiajs/react';
+import {Head, Link} from '@inertiajs/react';
 import Header from "@/Components/Blog/Header.jsx";
 import Footer from "@/Components/Blog/Footer.jsx";
 
@@ -21,6 +21,14 @@ export default function Guest({children, head}) {
         <div className="antialiased bg-gray-100 text-gray-800">
             <div className="flex flex-col min-h-screen space-y-12">
                 <Header/>
+                <a href={'https://www.frameworkx.info/docs/introduction'} target={'_blank'} className={'mx-auto border-b'}>
+                    <div id={'frameworkx-banner'} className={'mx-auto -mt-2'}>
+                        <div className="flex items-center justify-center mr-4  rounded-full">
+                            <img src={'/frameworkx-banner.png'} alt={'frameworkx'}/>
+                        </div>
+                    </div>
+                </a>
+
                 <main className="container flex-1 max-w-3xl px-6 mx-auto space-y-12 xl:max-w-5xl pb-20">
                     {children}
                 </main>
