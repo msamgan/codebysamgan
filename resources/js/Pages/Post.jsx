@@ -30,7 +30,7 @@ export default function Post({post, relatedPosts}) {
                 }
             }}
         >
-            <div className="max-w-5xl px-6 mx-auto space-y-12 post">
+            <div className="px-6 mx-auto space-y-12 post">
                 <article className="space-y-8 bg-gray-100 text-gray-900">
                     <div className="space-y-6">
                         <h1 className="text-5xl font-bold md:tracki md:text-5xl">{post.title}</h1>

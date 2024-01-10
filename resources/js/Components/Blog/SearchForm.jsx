@@ -8,7 +8,7 @@ export default function SearchForm({search, setSearch, posts}) {
                } placeholder={'search...'}/>
 
         <span className={
-            "text-sm font-medium text-gray-900 tracking-wide font-display dark:text-gray-100"
+            "text-sm font-medium text-black tracking-wide font-display"
         }>
             Showing
             <span className="font-semibold text-gray-900"> {posts.length} </span>
