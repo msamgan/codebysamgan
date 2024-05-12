@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "lint": "prettier --write . && ./vendor/bin/pint"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
@@ -20,6 +21,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@giscus/react": "^2.3.0"
+        "@giscus/react": "^2.3.0",
+        "prettier": "^3.2.5"
     }
 }

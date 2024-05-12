@@ -16,10 +16,9 @@ class PostController extends Controller
     public function index(): Response
     {
         return Inertia::render('Welcome')->with([
-                'posts' => Post::userPosts(request()->query('q')),
-                'q' => request()->query('q'),
-            ]
-        );
+            'posts' => Post::userPosts(request()->query('q')),
+            'q' => request()->query('q'),
+        ]);
     }
 
     public function post(Post $post): Response

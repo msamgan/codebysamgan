@@ -115,7 +115,6 @@ table tr:nth-child(1) {
     font-weight: 900;
     font-size: 18px;
     color: #24292e;
-
 }
 
 table tr:nth-child(2n) {
@@ -140,4 +139,15 @@ blockquote {
     border-radius: 4px;
     margin-bottom: 1.6em;
     font-size: 22px;
+}
+
+.article-excerpt {
+    padding: 1.0em;
+    transition: all 0.3s;
+}
+
+.article-excerpt:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffe1cd;
 }

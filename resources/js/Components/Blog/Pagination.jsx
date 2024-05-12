@@ -1,28 +1,28 @@
-import {Link} from "@inertiajs/react";
+import { Link } from "@inertiajs/react";
 
-export default function Pagination({pagination, links = [], meta = null}) {
+export default function Pagination({ pagination, links = [], meta = null }) {
     return (
         <div className="my-2 sm:flex sm:flex-1 sm:items-center sm:justify-between">
             <p className="text-sm leading-5 text-gray-700">
-                Showing{' '}
+                Showing{" "}
                 <span className="font-medium">
                     {meta ? meta.from : pagination.from}
                 </span>
                 /
                 <span className="font-medium">
-                    {meta ? meta.to : pagination.to}{' '}
+                    {meta ? meta.to : pagination.to}{" "}
                 </span>
                 (
                 <span className="font-medium">
                     {meta ? meta.total : pagination.total}
-                </span>{' '}
+                </span>{" "}
                 total)
             </p>
             <div>
                 <span className="relative z-0 inline-flex rounded-md shadow-sm">
                     <span>
                         {links.map((link, index) => {
-                            const key = link.label + index
+                            const key = link.label + index;
                             if (link.active) {
                                 return (
                                     <span key={key}>
@@ -33,7 +33,7 @@ export default function Pagination({pagination, links = [], meta = null}) {
                                             }}
                                         ></span>
                                     </span>
-                                )
+                                );
                             }
 
                             if (link.url === null) {
@@ -46,7 +46,7 @@ export default function Pagination({pagination, links = [], meta = null}) {
                                             }}
                                         ></span>
                                     </span>
-                                )
+                                );
                             }
 
                             return (
@@ -60,11 +60,11 @@ export default function Pagination({pagination, links = [], meta = null}) {
                                         }}
                                     ></Link>
                                 </span>
-                            )
+                            );
                         })}
                     </span>
                 </span>
             </div>
         </div>
-    )
+    );
 }
