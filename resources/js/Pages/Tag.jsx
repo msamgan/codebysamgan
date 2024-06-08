@@ -16,7 +16,7 @@ export default function Tag({ tag, posts, q }) {
                 title: tag.name,
             }}
         >
-            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 Tag: {tag.name}
             </h1>
 

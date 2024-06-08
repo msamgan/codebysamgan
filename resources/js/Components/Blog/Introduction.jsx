@@ -18,13 +18,13 @@ export default function Introduction({}) {
     }, []);
 
     return (
-        <section className="max-w-4xl px-6 mx-auto space-y-12 bg-gray-100 text-gray-900">
+        <section className="max-w-4xl px-6 mx-auto text-gray-900 bg-gray-100 space-y-12">
             <div className="">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
                     <img
                         src={intro.avatar}
                         alt=""
-                        className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start bg-gray-500 border-gray-300"
+                        className="self-center flex-shrink-0 w-24 h-24 bg-gray-500 border border-gray-300 rounded-full md:justify-self-start"
                     />
                     <div className="flex flex-col">
                         <h4 className="text-2xl font-semibold">{intro.name}</h4>
@@ -41,7 +41,7 @@ export default function Introduction({}) {
                         rel="noopener noreferrer"
                         href="https://github.com/msamgan"
                         aria-label="GitHub"
-                        className="p-2 rounded-md text-gray-800 hover:text-orange-600"
+                        className="p-2 text-gray-800 rounded-md hover:text-orange-600"
                     >
                         <svg
                             viewBox="0 0 496 512"
@@ -55,7 +55,7 @@ export default function Introduction({}) {
                         rel="noopener noreferrer"
                         href="https://twitter.com/msamgank"
                         aria-label="Twitter"
-                        className="p-2 rounded-md text-gray-800 hover:text-orange-600"
+                        className="p-2 text-gray-800 rounded-md hover:text-orange-600"
                     >
                         <svg
                             viewBox="0 0 512 512"
@@ -69,7 +69,7 @@ export default function Introduction({}) {
                         rel="noopener noreferrer"
                         href="mailto:mohdsamgankhan@gmail.com"
                         aria-label="Email"
-                        className="p-2 rounded-md text-gray-800 hover:text-orange-600"
+                        className="p-2 text-gray-800 rounded-md hover:text-orange-600"
                     >
                         <svg
                             viewBox="0 0 512 512"

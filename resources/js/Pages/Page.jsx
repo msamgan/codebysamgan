@@ -8,7 +8,7 @@ export default function Page({ page }) {
                 title: page.title,
             }}
         >
-            <article className="max-w-4xl px-6 py-24 mx-auto space-y-16 bg-gray-100 text-gray-900 post">
+            <article className="max-w-4xl px-6 py-24 mx-auto text-gray-900 bg-gray-100 space-y-16 post">
                 <div className="w-full mx-auto space-y-4">
                     <h1 className="text-5xl font-bold leadi">{page.title}</h1>
                     <p className="text-sm text-gray-600">

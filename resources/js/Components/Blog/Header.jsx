@@ -34,7 +34,7 @@ export default function Header() {
 
     return (
         <div className={"border-b bg-orange-600"}>
-            <header className="container flex items-center justify-between w-full max-w-3xl px-6 py-10 mx-auto xl:max-w-5xl border-b">
+            <header className="container flex items-center justify-between w-full max-w-3xl px-6 py-10 mx-auto border-b xl:max-w-5xl">
                 <Link
                     rel="noopener noreferrer"
                     href="/"
@@ -43,7 +43,7 @@ export default function Header() {
                     {import.meta.env.VITE_APP_NAME}
                 </Link>
                 <div className="flex items-center">
-                    <div className="hidden space-x-2 font-medium sm:block text-white">
+                    <div className="hidden font-medium text-white space-x-2 sm:block">
                         <a
                             rel="noopener noreferrer"
                             href={route("page.tags")}
@@ -69,7 +69,7 @@ export default function Header() {
                 {topTags.map((tag, index) => (
                     <div
                         key={index}
-                        className="px-2 py-1 font-medium text-white bg-orange-500 rounded-md text-xl"
+                        className="px-2 py-1 text-xl font-medium text-white bg-orange-500 rounded-md"
                     >
                         <Link href={route("tag", tag.slug)}>{tag.name}</Link>
                     </div>

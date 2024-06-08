@@ -37,7 +37,7 @@ export default function PostListing({ posts }) {
                                             {post.title}
                                         </Link>
                                     </h3>
-                                    <p className="max-w-full prose text-gray-800">
+                                    <p className="max-w-full text-gray-800 prose">
                                         {post.excerpt}
                                     </p>
                                     <div className="flex flex-wrap space-x-3">

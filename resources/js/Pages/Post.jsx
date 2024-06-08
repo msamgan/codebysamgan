@@ -31,7 +31,7 @@ export default function Post({ post, relatedPosts }) {
             }}
         >
             <div className="px-6 mx-auto space-y-12 post">
-                <article className="space-y-8 bg-gray-100 text-gray-900">
+                <article className="text-gray-900 bg-gray-100 space-y-8">
                     <div className="space-y-6">
                         <h1 className="text-5xl font-bold md:tracki md:text-5xl">
                             {post.title}
@@ -43,7 +43,7 @@ export default function Post({ post, relatedPosts }) {
                                 alt={post.title}
                             />
                         ) : null}
-                        <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center text-gray-600">
+                        <div className="flex flex-col items-start justify-between w-full text-gray-600 md:flex-row md:items-center">
                             <div className="flex items-center md:space-x-2">
                                 <p className="text-sm">
                                     {post.author.name} •{" "}
@@ -63,12 +63,12 @@ export default function Post({ post, relatedPosts }) {
                     </div>
                 </article>
                 <div>
-                    <div className="flex flex-wrap py-6 space-x-2 border-t border-dashed border-gray-600">
+                    <div className="flex flex-wrap py-6 border-t border-gray-600 border-dashed space-x-2">
                         <TagList tagArray={post.tags} />
                     </div>
                     <div className="space-y-2">
                         <h4 className="text-lg font-semibold">Related posts</h4>
-                        <ul className="ml-4 space-y-1 list-disc">
+                        <ul className="ml-4 list-disc space-y-1">
                             {relatedPosts.map((post) => {
                                 return (
                                     <li key={post.id}>

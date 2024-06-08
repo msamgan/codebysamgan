@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/react";
 export default function Pagination({ pagination, links = [], meta = null }) {
     return (
         <div className="my-2 sm:flex sm:flex-1 sm:items-center sm:justify-between">
-            <p className="text-sm leading-5 text-gray-700">
+            <p className="text-sm text-gray-700 leading-5">
                 Showing{" "}
                 <span className="font-medium">
                     {meta ? meta.from : pagination.from}
@@ -27,7 +27,7 @@ export default function Pagination({ pagination, links = [], meta = null }) {
                                 return (
                                     <span key={key}>
                                         <span
-                                            className="relative -ml-px inline-flex cursor-default items-center border border-gray-300 bg-orange-700 px-4 py-2 text-sm font-medium leading-5 text-gray-100"
+                                            className="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-100 bg-orange-700 border border-gray-300 cursor-default leading-5"
                                             dangerouslySetInnerHTML={{
                                                 __html: link.label,
                                             }}
@@ -40,7 +40,7 @@ export default function Pagination({ pagination, links = [], meta = null }) {
                                 return (
                                     <span key={key}>
                                         <span
-                                            className="relative -ml-px inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-gray-300"
+                                            className="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-300 bg-white border border-gray-300 leading-5"
                                             dangerouslySetInnerHTML={{
                                                 __html: link.label,
                                             }}
@@ -54,7 +54,7 @@ export default function Pagination({ pagination, links = [], meta = null }) {
                                     <Link
                                         href={link.url}
                                         preserveState={true}
-                                        className="relative -ml-px inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium leading-5 text-gray-700 hover:bg-orange-600 hover:text-white"
+                                        className="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:bg-orange-600 hover:text-white"
                                         dangerouslySetInnerHTML={{
                                             __html: link.label,
                                         }}

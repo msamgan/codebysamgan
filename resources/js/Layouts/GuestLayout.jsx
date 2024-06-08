@@ -18,7 +18,7 @@ const FxBanner = () => {
                         alt={"frameworkx"}
                     />
 
-                    <h2 className="text-center text-5xl tracki font-bold text-black">
+                    <h2 className="text-5xl font-bold text-center text-black tracki">
                         Your Accelerated Path to{" "}
                         <span className={"text-orange-600"}>API Creation</span>
                     </h2>
@@ -28,7 +28,7 @@ const FxBanner = () => {
                         check it out. All and Any feedback is appreciated.
                     </p>
                     <a
-                        href="https://www.frameworkx.info/docs/introduction"
+                        href="https://frameworkx.info/docs/introduction"
                         rel="noreferrer noopener"
                         target={"_blank"}
                         className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block bg-orange-600 text-gray-50 border-orang\e-600 font-bold"
@@ -75,13 +75,13 @@ export default function Guest({ children, head }) {
                         );
                     })}
             </Head>
-            <div className="antialiased bg-gray-100 text-gray-800">
+            <div className="antialiased text-gray-800 bg-gray-100">
                 <div className="flex flex-col min-h-screen space-y-12">
                     <Header />
 
                     <FxBanner />
 
-                    <main className="flex-1 max-w-5xl px-6 mx-auto space-y-12 pb-20">
+                    <main className="flex-1 max-w-5xl px-6 pb-20 mx-auto space-y-12">
                         {children}
                     </main>
                     {/*<Footer/>*/}
