@@ -30,6 +30,8 @@ Route::get('/top/tags', [PageController::class, 'topTags'])->name('top.tags');
 
 Route::get('/page/{page}', [PageController::class, 'page'])->name('page');
 
+Route::get('/post/list', [PageController::class, 'postList'])->name('post.list');
+
 /*Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
